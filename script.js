@@ -166,39 +166,48 @@ let chanel = document.querySelector('#chanelPhoto')
 chanel.src = "ff_photos/Chanel_1.jpg"
 let chanelStatus = false
 
-function changePhotoChanel(){
-    chanel.src = "ff_photos/chanelTrousers.jpg"   
-    console.log('change foto to trousers')
-}
-chanel.addEventListener('click', changePhotoChanel)
+// function changePhotoChanel(){
+//     chanel.src = "ff_photos/chanelTrousers.jpg"   
+//     console.log('change foto to trousers')
+// }
 
-if (chanelStatus == true){
-    console.log('showing the trousers')
-    chanel.src = "ff_photos/chanelTrousers.jpg"   
-} 
-    
-else {
-    console.log('showing chanel')
+function changePhotoChanel(){
+    if (chanelStatus){
+        console.log('showing the trousers')
+        chanel.src = "ff_photos/chanelTrousers.jpg"   
+        chanelStatus = false
+    } 
+        
+    else if(!chanelStatus) {
+        console.log('showing chanel')
         chanel.src = "ff_photos/Chanel_1.jpg"  
-   
-}
+        chanelStatus = true
+       
+    }
+
+};
+chanel.addEventListener('click', changePhotoChanel);
+
 
 let yves = document.querySelector('#yvesPhoto')
 yves.src = "ff_photos/YvesSaintLaurent.jpeg"
 let yvesStatus = false
 
+// function changePhotoYves(){
+//     console.log('change foto to le smokin')
+//     yves.src = "ff_photos/ysl_lesmokin.png"
+// }
+
 function changePhotoYves(){
-    console.log('change foto to le smokin')
+if (yvesStatus){
     yves.src = "ff_photos/ysl_lesmokin.png"
+    yvesStatus = false
 }
-yves.addEventListener('click', changePhotoYves)
-
-if (yvesStatus == true){
-    yves.src = "ff_photos/ysl_lesmokin.png"
-}
-else{
+else if (!yvesStatus){
      yves.src = "ff_photos/YvesSaintLaurent.jpeg"
-}
+     yvesStatus = true
+}};
+yves.addEventListener('click', changePhotoYves);
 
 
-// homework
+// homework and wessel helped me;)))))))
