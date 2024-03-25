@@ -18,15 +18,17 @@ header {
     text-align: center;
     width: 100vw;
     font-size: 30px;
-    margin-top: 1em;
-    /* position: fixed; */
+    position: fixed;
+    z-index: 9;
+    background-color: white;
+    margin-top: -2em;
 }
 nav {
     text-decoration: none;
 }
 
 li {
-    padding: .5em;    
+    padding-top: .7em;    
 }
 
 nav a {
@@ -38,6 +40,7 @@ ul {
     list-style-type: none; 
     display: flex;
     justify-content: space-around;
+    position: relative;
 }
 .couturiers section {
     display: flex;
@@ -50,12 +53,12 @@ article {
 article img {
     width: 50vw;
 }
-article p {
+.couturiers article p {
     margin-left: 3vw;
     margin-right: 3.5vw;
 }
 
-#Chanel {
+#chanel {
     font-size: 25px;
 }
 
@@ -68,10 +71,12 @@ article p {
     margin-left: -19em;
     display: flex;
     justify-content: center;
-    margin-top: 3.8em;
+    margin-top: 5.5em;
     color: white;
     background-color: rgb(101, 67, 33);
     padding: .3em;
+    z-index: 12;
+    position: relative;
 }
 #quote{
     font-size: 20px;
@@ -86,40 +91,50 @@ article p {
     display: flex;
     width: 50vw;
     margin-left: 25vw;
-    margin-top: -10em;
+    margin-top: -12em;
 }
 
-#juliaRoberts {
+#juliaRoberts, #florencePugh {
     display: flex;
     justify-content: center;
     width: 25vw;
-    margin-left: 33vw;
+    margin-left: 37.5vw;
     z-index: 4;
     position: relative;
     
 }
 
-#juliaRobertsInfo {
-    width: 40vw;
-    margin-left: -7em;
+#florenceSection{
+    padding-top: 15em;
+    padding-bottom: 10em;
+}
+
+
+
+#juliaArticle, #florenceArticle {
     z-index: 3;
     position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 25vw;
+    margin-left: calc(75vw * .5);
+    margin-top: -27.6em;
+    height: 27.6em;
+    
 }
 
 #JuliaSection {
-    margin-top: 5em;
+    padding-top: 10em;
 }
 h1{
     font-weight: 200;
-    margin-left: -6em;
 }
 .waves section {
-    /* width: 100vw; */
+    
     padding: 13em;
-    margin-left: -6em;
+    margin-left: -3.4em;
     display: flex;
-    /* flex-direction: column; */
-   
 }
 .waves article {
     width: 50vw;
@@ -136,4 +151,26 @@ h1{
 }
 #vivianWestwood {
     margin-top: -2em;
+}
+#dior {
+    margin-top: -1em;
+    
+}
+.couturiers main{
+    margin-top: 3em;
+}
+.waves main{
+    margin-top: 3em;
+}
+#section_1{
+    padding-top: 18em;
+}
+#section_2{
+    padding-top: 15em;
+}
+.index header{
+    margin-top: -13.2em;
+}
+.statements header nav{
+    margin-top: 2.7em;
 }

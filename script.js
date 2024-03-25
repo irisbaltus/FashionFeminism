@@ -1,8 +1,8 @@
 console.log("yoooo")
 
 let i = 0;
-let text = "Feminism means believing in equality of all genders, of all colours and of all origins. It's not about hating men, nor thinking that women are better. It's simply all about equality. As  Chimamanda Ngozi Adichie quoted: 'Feminist: the person who believes in the social, political and economic equality of the sexes.' The way we dress nowadays as men, women and everything in between has not always been this way. Feminist waves has played a huge role in changing fashion to how it is currently. On this website you will see explanations about these different waves and how that has changed the fashion industry. hopefully you'll get involved, interested or inspired." 
-let speed = 30; //duration of the effect in milliseconds
+let text = "Feminism means believing in equality of all genders, of all colours and of all origins. It's not about hating men, nor thinking that women are better. It's simply all about equality. As Chimamanda Ngozi Adichie quoted: 'Feminist: the person who believes in the social, political and economic equality of the sexes.' The way we dress nowadays as men, women and everything in between has not always been this way. Feminist waves has played a huge role in changing fashion to how it is currently. On this website you will see explanations about these different waves and how that has changed the fashion industry. hopefully you'll get involved, interested or inspired." 
+let speed = 25; //duration of the effect in milliseconds per letter
 
 function typeWriter() {
     if (i < text.length){ 
@@ -50,7 +50,6 @@ function scrollToNext(){
             behavior: "smooth"
         });
         currentElement++;
-
     }
 
     else if(currentElement == 2){
@@ -80,110 +79,126 @@ document.addEventListener('click', scrollToNext);
 
 // teacher helped me :) and: MDN: https://developer.mozilla.org/en-US/docs/Web/API/Window/scroll
 
-let photo = document.querySelector('#juliaRoberts');
-// let position = 0;
-// setInterval(movePhoto, 5000);
-// setTimeout(movePhoto,3000)
-// const delay = 5000;
+const textJulia = document.querySelector('#juliaArticle');
 
-function movePhoto(){
-    console.log("in movePhoto");
-    photo.setAttribute("style", "left:-350px")}; //name, value
+function moveTextJulia(){
+    if(textJulia != null){
+    console.log('on hover: text Julia moves to the right')
+    textJulia.animate([
+        { 
+            transform: "translateX(0)"
+        },
+        { 
+            transform: "translateX(250px)"
+        }],
+        {
+            duration: 4000, 
+            fill: "forwards", 
+        })};
+} 
+if(textJulia != null){
+textJulia.addEventListener('mouseover', moveTextJulia)};
 
-photo.addEventListener('mouseover', movePhoto);
-setTimeout(movePhoto, 2000);
+const photoJulia = document.querySelector('#juliaRoberts');
 
-//bron: https://developer.mozilla.org/en-US/docs/Web/API/setInterval#delay_restrictions
-
-//moving picture of julia roberts
-
-
-// setInterval(movePhoto, 1000);
-// pos = 0;
-// let move = document.querySelector('#juliaRoberts').textContent
-
-// function movePhoto(setInterval){
-//    move.style.left = x + "px"; x++; 20;
-// }
-// document.querySelector('#juliaRoberts').addEventListener('')
-
-// let change = document.querySelector('#juliaRoberts')
-// pos = 0;
-// timer = setInterval
-// let x = 0;
-// function() {
-//         pos++;
-//         change.style.left = pos+"px";
-//         if ( pos == 200) clearInterval(timer);
-//     };
-
-//     change.querySelector('#juliaRoberts').addEventListener()
-
-// function move (){
-//     while(change < 200){
-//         change++;
-//     }
-
-// }
-// let btnContainer = document.getElementById("myDIV");
-// let section = sectionContainer.querySelector('#section_1')
-
-// for (let i = 0; i < btns.length; i++) {
-//     btns[i].addEventListener("click", function(){
-
-//     } 
-
-// window.scroll({
-//     // top:100,
-//     // left:100,
-//     behavior: "smooth",
-// });
-
-// let section =  document.querySelector('#section_1')
-// // const activeEl = document.activeElement('#section_1');
-// const element = document.activeElement.tagName; 
-
-
-// function scrollDown(){
-//     if(element == '#section_1'){ 
-//         section++;
-// }}
-// document.querySelector('#section_1').addEventListener('scroll', scrollDown)
-
-// let allSec =  document.querySelectorAll('#waves' ('section'))
-// allSec.forEach(('#waves' ('section')))
-
-
-
-// function scrollIntoView() {
-//     document.querySelectorAll(#waves (section)).textContent
-
-// }
-
-// element.scrollIntoView(){
-
-
-// const img = document.querySelector("#juliaRoberts")
-
-// function hoverOver(){
-//     document.querySelector("#juliaRobertsInfo").textContent = "It all started at the global awards in 1990, this is where Julia Roberts achieved her first major award for her role in Magnolia Steels. Roberts wore a grey men's suit from Giorgio Armani.  In 2014 she said  “I clearly didn't care what anyone thought about it” in an interview. Well apperentaly everybody loved it. Back then it wasn't as self-evident to wear a men's suit to a red carpet as nowadays. She's been a connoisseur of button-ups and suit pants. It was assigned to Julia to make those gender-bending fashion statements."
-// }
-
-// document.querySelector("#juliaRoberts").addEventListener("mouseover ", hoverOver)
-
-
-
-// let allLi = document.querySelectorAll("#waves"(li))
-// allLi.forEach((li)=> li.style.color = '#FF0000')
+function movePhotoJulia(){
     
-// );
+    console.log('on hover: photo Julia moves to the left')
+    photoJulia.animate([
+        { 
+            transform: "translateX(0)"
+        },
+        { 
+            transform: "translateX(-250px)"
+        }],
+        { 
+            duration:4000, 
+            fill: "forwards", 
+            delay: 1000,
+        })};
+
+if(photoJulia != null){
+ photoJulia.addEventListener('mouseover', movePhotoJulia)};
 
 
-// function showHint(){
-//     hintP.textContent = "see the button"
-//     setTimeout(controleerGetal, 3000); // recieves a function and time in milliseconds
-// }
-// function hideHint(){
-//     hintP.textContent = ""
-// }
-// showHint()
+ const textFlorence = document.querySelector('#florenceArticle')
+
+ function moveTextFlorence(){
+    console.log('on hover: text Florence moves to the left')
+    textFlorence.animate([
+        {
+            transform: "translateX(0)"
+        },
+        {
+            transform: "translateX(-250px)"
+        }],
+        {
+            duration:4000, 
+            fill: "forwards", 
+        });
+ }
+ if(textFlorence != null){
+ textFlorence.addEventListener('mouseover', moveTextFlorence)};
+
+ const photoFlorence = document.querySelector('#florencePugh')
+
+ function movePhotoFlorence(){
+    console.log('on hover: photo florence moves to the right')
+    photoFlorence.animate([
+        {
+            transform: "translateX(0)"
+        },
+        {
+            transform: "translateX(250px)"
+        }],
+        {
+            duration:4000, 
+            fill: "forwards", 
+            delay: 1000,
+        });
+ }
+ if(photoFlorence != null){
+ photoFlorence.addEventListener('mouseover', movePhotoFlorence)};
+ 
+// bron: https://youtu.be/LE9EaIZdjFM?si=iS1DWk_C93TVMihc 
+
+let chanel = document.querySelector('#chanelPhoto')
+chanel.src = "ff_photos/Chanel_1.jpg"
+let chanelStatus = false
+
+function changePhotoChanel(){
+    chanel.src = "ff_photos/chanelTrousers.jpg"   
+    console.log('change foto to trousers')
+}
+chanel.addEventListener('click', changePhotoChanel)
+
+if (chanelStatus == true){
+    console.log('showing the trousers')
+    chanel.src = "ff_photos/chanelTrousers.jpg"   
+} 
+    
+else {
+    console.log('showing chanel')
+        chanel.src = "ff_photos/Chanel_1.jpg"  
+   
+}
+
+let yves = document.querySelector('#yvesPhoto')
+yves.src = "ff_photos/YvesSaintLaurent.jpeg"
+let yvesStatus = false
+
+function changePhotoYves(){
+    console.log('change foto to le smokin')
+    yves.src = "ff_photos/ysl_lesmokin.png"
+}
+yves.addEventListener('click', changePhotoYves)
+
+if (yvesStatus == true){
+    yves.src = "ff_photos/ysl_lesmokin.png"
+}
+else{
+     yves.src = "ff_photos/YvesSaintLaurent.jpeg"
+}
+
+
+// homework
